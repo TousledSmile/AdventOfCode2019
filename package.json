@@ -1,0 +1,33 @@
+{
+  "name": "adventofcode2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TousledSmile/AdventOfCode2019.git"
+  },
+  "keywords": [
+    "advent",
+    "of",
+    "code",
+    "1019"
+  ],
+  "author": "Anita Włosek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TousledSmile/AdventOfCode2019/issues"
+  },
+  "homepage": "https://github.com/TousledSmile/AdventOfCode2019#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0"
+  },
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
+}
