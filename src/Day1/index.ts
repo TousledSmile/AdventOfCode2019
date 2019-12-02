@@ -9,7 +9,7 @@ export const calculateFuelNeeded = (moduleMasses: number[]) => {
 export const calculateFuelNeededFromInput = (input: string) => {
     const moduleMasses = input
         .split('\n')
-        .map(input => parseFloat(input));
+        .map(input => parseInt(input));
 
     return calculateFuelNeeded(moduleMasses);
 };
@@ -23,7 +23,7 @@ export const calculateAllFuelNeeded = (moduleMasses: number[]) => {
 export const calculateAllFuelNeededFromInput = (input: string) => {
     const moduleMasses = input
         .split('\n')
-        .map(input => parseFloat(input));
+        .map(input => parseInt(input));
 
     return calculateAllFuelNeeded(moduleMasses);
 };
