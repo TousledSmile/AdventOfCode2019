@@ -16,10 +16,29 @@ test('Point can check if it belongs to line', () => {
   expect(new Point(12, 4).belongsTo(testLineDown)).toBeFalsy();
 });
 
+test('Point can calculate distance between it and another point', () => {
+  expect(new Point(0, 0).calculateManhatanDistance(new Point(3, 3))).toEqual(6);
+  expect(new Point(0, 0).calculateManhatanDistance(new Point(-3, -3))).toEqual(6);
+  expect(new Point(54, 3).calculateManhatanDistance(new Point(50, 0))).toEqual(7);
+  expect(new Point(100, 300).calculateManhatanDistance(new Point(150, 150))).toEqual(200);
+});
+
 test('Line can check if another line is intersecting with it', () => {
   expect(testLineUp.isIntersecting(testLineToLeft)).toBeTruthy();
   expect(testLineToRight.isIntersecting(testLineDown)).toBeTruthy();
   expect(testLineToRight.isIntersecting(testLineToLeft)).toBeFalsy();
   expect(testLineDown.isIntersecting(testLineUp)).toBeFalsy();
   expect(testLineUp.isIntersecting(testLineToRight)).toBeFalsy();
+});
+
+test('Line can check get intersection with another line', () => {
+  expect(testLineUp.getIntersection(testLineToLeft).x).toEqual(33);
+  expect(testLineUp.getIntersection(testLineToLeft).y).toEqual(3);
+
+  expect(testLineToRight.getIntersection(testLineDown).x).toEqual(5);
+  expect(testLineToRight.getIntersection(testLineDown).y).toEqual(0);
+
+  expect(testLineToRight.getIntersection(testLineToLeft)).toBeUndefined();
+  expect(testLineDown.getIntersection(testLineUp)).toBeUndefined();
+  expect(testLineUp.getIntersection(testLineToRight)).toBeUndefined();
 });
