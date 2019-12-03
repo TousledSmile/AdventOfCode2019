@@ -15,7 +15,7 @@ export class Wire {
     });
   }
 
-  getNearestIntersectionManhatanDistance = (wire: Wire, center = new Point(0, 0)) => {
+  getNearestIntersectionManhattanDistance = (wire: Wire, center = new Point(0, 0)) => {
     let wireIntersectionDistance = 9999999999999999999;
 
     wire.lines.forEach((line1) => {
@@ -23,7 +23,7 @@ export class Wire {
         const intersection = line1.getIntersection(line2);
 
         if (!!intersection) {
-          const distance = center.calculateManhatanDistance(intersection);
+          const distance = center.calculateManhattanDistance(intersection);
 
           if (distance !== 0 && distance < wireIntersectionDistance) {
             wireIntersectionDistance = distance;
@@ -45,8 +45,8 @@ export class Wire {
         const intersection = line1.getIntersection(line2);
 
         if (!!intersection) {
-          const stepsOnWire1 = walkedStepsOnWire1 + line1.start.calculateManhatanDistance(intersection);
-          const stepsOnWire2 = walkedStepsOnWire2 + line2.start.calculateManhatanDistance(intersection);
+          const stepsOnWire1 = walkedStepsOnWire1 + line1.start.calculateManhattanDistance(intersection);
+          const stepsOnWire2 = walkedStepsOnWire2 + line2.start.calculateManhattanDistance(intersection);
           const distance = stepsOnWire1 + stepsOnWire2;
 
           if (distance !== 0 && distance < wireIntersectionDistance) {

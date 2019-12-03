@@ -12,7 +12,7 @@ export class Point {
     this.y = y;
   }
 
-  calculateManhatanDistance = (point: Point) => {
+  calculateManhattanDistance = (point: Point) => {
     return Math.abs(point.x - this.x) + Math.abs(point.y - this.y);
   }
   

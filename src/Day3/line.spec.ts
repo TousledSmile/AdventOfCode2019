@@ -17,10 +17,10 @@ test('Point can check if it belongs to line', () => {
 });
 
 test('Point can calculate distance between it and another point', () => {
-  expect(new Point(0, 0).calculateManhatanDistance(new Point(3, 3))).toEqual(6);
-  expect(new Point(0, 0).calculateManhatanDistance(new Point(-3, -3))).toEqual(6);
-  expect(new Point(54, 3).calculateManhatanDistance(new Point(50, 0))).toEqual(7);
-  expect(new Point(100, 300).calculateManhatanDistance(new Point(150, 150))).toEqual(200);
+  expect(new Point(0, 0).calculateManhattanDistance(new Point(3, 3))).toEqual(6);
+  expect(new Point(0, 0).calculateManhattanDistance(new Point(-3, -3))).toEqual(6);
+  expect(new Point(54, 3).calculateManhattanDistance(new Point(50, 0))).toEqual(7);
+  expect(new Point(100, 300).calculateManhattanDistance(new Point(150, 150))).toEqual(200);
 });
 
 test('Line can check if another line is intersecting with it', () => {
