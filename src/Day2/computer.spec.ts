@@ -12,8 +12,8 @@ test('compute program sequence', () => {
 test('restore gravity in program sequence', () => {
     const computer = new Computer();
 
-    expect(computer.restoreGravity([1,0,0,0,99])).toEqual([1,12,2,0,99]);
-    expect(computer.restoreGravity([2,3,0,3,99])).toEqual([2,12,2,3,99]);
-    expect(computer.restoreGravity([2,4,4,5,99,0])).toEqual([2,12,2,5,99,0]);
-    expect(computer.restoreGravity([1,1,1,4,99,5,6,0,99])).toEqual([1,12,2,4,99,5,6,0,99]);
+    expect(computer.restoreNounAndVerb([1,0,0,0,99], 12, 2)).toEqual([1,12,2,0,99]);
+    expect(computer.restoreNounAndVerb([2,3,0,3,99], 12, 2)).toEqual([2,12,2,3,99]);
+    expect(computer.restoreNounAndVerb([2,4,4,5,99,0], 12, 2)).toEqual([2,12,2,5,99,0]);
+    expect(computer.restoreNounAndVerb([1,1,1,4,99,5,6,0,99], 12, 2)).toEqual([1,12,2,4,99,5,6,0,99]);
 });

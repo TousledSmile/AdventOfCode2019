@@ -29,11 +29,11 @@ export class Computer {
         return computedSequence;
     }
 
-    restoreGravity = (sequence: number[]) => {
+    restoreNounAndVerb = (sequence: number[], noun: number, verb: number) => {
         const sequenceWithRestoredGravity = [...sequence];
     
-        sequenceWithRestoredGravity[1] = 12;
-        sequenceWithRestoredGravity[2] = 2;
+        sequenceWithRestoredGravity[1] = noun;
+        sequenceWithRestoredGravity[2] = verb;
 
         return sequenceWithRestoredGravity;
     }
